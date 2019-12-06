@@ -6,7 +6,7 @@ function JokesList() {
     const [jokesList, setJokesList] = useState([])
 
     useEffect(() => {
-        axiosWithAuth().get('http://localhost:3300/api/jokes')
+        axiosWithAuth().get('https://be-0auth.herokuapp.com/api/jokes')
         .then(res => {
             console.log("users post response" , res);
             setJokesList(res.data)

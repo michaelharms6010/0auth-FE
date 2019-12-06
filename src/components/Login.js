@@ -17,7 +17,7 @@ function Login(props) {
 
     const handleSubmit = e => {
         e.preventDefault();
-        axios.post('http://localhost:3300/api/auth/login', user)
+        axios.post('https://be-0auth.herokuapp.com/api/auth/login', user)
         .then(res => {
             console.log("login post response" , res);
             localStorage.setItem('token', JSON.stringify(res.data.token))
